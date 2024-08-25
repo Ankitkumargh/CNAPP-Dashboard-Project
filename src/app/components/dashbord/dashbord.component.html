@@ -1,0 +1,254 @@
+
+    
+        <nav class="navbar navbar-light" >
+            <div class="navigation">
+              <div>  <a class="home">Home</a></div>
+                <div class="dashboard">
+                  <a class="dashboard-v2">Dashboard V2</a>
+                </div>
+               </div>
+               <div class="text">
+                <div class="background-parent">
+                  <div class="background"></div>
+                  <i class="bi bi-search fs-6"></i>
+          <input 
+          class="search-anything fs-6" style="color: black;"
+          placeholder= " Search anything."
+          type="text"
+          [(ngModel)]="searchQuery"
+        />
+                  
+                </div>
+              </div>
+               <div class="message">
+                <div><i class="bi bi-chevron-down"></i></div>
+                <div><i class="bi bi-bell"></i></div>
+               </div>
+          </nav>
+        <div class="container-fluid" style=" background-color: #e3f2fd;">
+         <div class="conatiner1">
+          <div class="dashbord-text">
+             <h5>CNAPP Dashboard</h5>
+          </div>
+          <div class="cnapp-box">
+           
+              <div class="d-flex align-items-center  rounded ">
+                <button type="button" class="btn btn-light d-flex align-items-center upbutton" (click)="togglePanel()">
+                  <span>Add Widget</span>
+                  <i class="bi bi-plus ms-2"></i>
+                </button>
+            
+                <button type="button" class="btn btn-light d-flex align-items-center mx-3 upbutton">
+                  <i class="bi bi-arrow-clockwise"></i>
+                </button>
+            
+                <button type="button" class="btn btn-light d-flex align-items-center mx-2 upbutton">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+            
+                <div class="dropdown ms-auto">
+                  <button class="btn btn-light d-flex align-items-center custom-border rounded mx-2" type="button">
+                    <i class="bi bi-clock"></i>
+                    <span class="ms-2" style="color: #070789;">Last 2 days</span>
+                    <i class="bi bi-chevron-down mx-1"></i>
+                  </button>
+                </div>
+              </div>
+            
+            
+          </div>
+         </div>
+        </div>
+        <div class="container-fluid2" style="background-color: #e3f2fd;">
+            <!-- Dashboard Headers and Sections -->
+            <div *ngIf="checkboxStates[0] || checkboxStates[1]"><h5 class="cpnn-text1" *ngIf="shouldShowItem('CSPM Executive Dashboard')" [ngClass]="{'highlight': shouldHighlightItem('CSPM Executive Dashboard')}">CSPM Executive Dashboard</h5></div>
+            <div class="dashboard-container">
+              <div class="dashboard-box" *ngIf="checkboxStates[0] && shouldShowItem('Cloud Accounts')" [ngClass]="{'highlight': shouldHighlightItem('Cloud Accounts')}">
+                <p>Cloud Accounts</p>
+                   
+               <div class="dashboard-box1">
+                <div class="part1">
+                  <div class="image-container">
+                    <img src="assets/image1.png" alt="Description of Image" />
+                  </div>
+                  
+                 </div>
+                 <div class="part2"> 
+                    <div class="status-box">
+                        <div class="status-square"></div>
+                        <div class="status-label">Connected (2)</div>
+                    </div>
+                    
+                    <div class="status-box">
+                        <div class="status-square" style="background-color: #ccc;"></div>
+                        <div class="status-label">Not Connected (2)</div>
+                    </div>
+                 </div>
+               </div>
+              </div>
+              <div class="dashboard-box" *ngIf="checkboxStates[1] && shouldShowItem('Cloud Account Risk Assessment')" [ngClass]="{'highlight': shouldHighlightItem('Cloud Account Risk Assessment')}" >
+                <p>Cloud Account Risk Assessment</p>
+
+                <div class="dashboard-box1">
+                    <div class="part1">
+                      <div class="image-container">
+                        <img src="assets/image2.png" alt="Description of Image" />
+                      </div>
+                     </div>
+                     <div class="part2"> 
+                        <div class="status-box">
+                            <div class="status-square" style="background-color: #f50606;"></div>
+                            <div class="status-label">Failed (1689)</div>
+                        </div>
+                        <div class="status-box">
+                            <div class="status-square" style="background-color: yellow;"></div>
+                            <div class="status-label">Warning (681)</div>
+                        </div>
+                        <div class="status-box">
+                            <div class="status-square" style="background-color: #ccc;"></div>
+                            <div class="status-label">Not available (36)</div>
+                        </div>
+                        <div class="status-box">
+                            <div class="status-square" style="background-color: green;"></div>
+                            <div class="status-label">passed (7253)</div>
+                        </div>
+                     </div>
+                   </div>
+
+                <h3>&nbsp;</h3> <!-- Empty header space -->
+              </div>
+              <div class="dashboard-box add-widget mx-2" *ngIf="checkboxStates[0] && checkboxStates[1] && shouldShowItem('Add Widget')" [ngClass]="{'highlight': shouldHighlightItem('Add Widget')}">
+                <div class="weidth1">
+                  <button style="color: rgb(70, 69, 69); background-color: transparent; border: none;" (click)="togglePanel()">
+                    <i class="bi bi-plus-lg mx-2"></i> Add Widget
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div  *ngIf="checkboxStates[2] || checkboxStates[3]"><h5 class="cpnn-text1"  *ngIf="shouldShowItem('CWPP Dashboard')" [ngClass]="{'highlight': shouldHighlightItem('CWPP Dashboard')}">CWPP Dashboard</h5></div>
+            <div class="dashboard-container">
+              <div class="dashboard-box" *ngIf="checkboxStates[2] && shouldShowItem('Top 5 Namespace Specific Alerts')" [ngClass]="{'highlight': shouldHighlightItem('Top 5 Namespace Specific Alerts')}">
+                <p>Top 5 Namespace Specific Alerts</p>
+
+                <div class="d-flex flex-column justify-content-center align-items-center pb-1">
+                  <img src="assets/graph.png" alt="Graph" class="w-50 h-50 mb-2">
+                  <p>No Graph data available</p>
+                </div>
+                
+                
+               
+                    
+              </div>
+              <div class="dashboard-box" *ngIf="checkboxStates[3] && shouldShowItem('Workload Alerts')" [ngClass]="{'highlight': shouldHighlightItem('Workload Alerts')}">
+                <p>Workload Alerts</p>
+                <div class="d-flex flex-column justify-content-center align-items-center pb-1">
+                  <img src="assets/graph.png" alt="Graph" class="w-50 h-50 mb-2">
+                  <p>No Graph data available</p>
+                </div>
+                <h3>&nbsp;</h3> <!-- Empty header space -->
+              </div>
+              <div class="dashboard-box add-widget mx-2" *ngIf="checkboxStates[2] && checkboxStates[3] && shouldShowItem('Add Widget')" [ngClass]="{'highlight': shouldHighlightItem('Add Widget')}">
+                <div class="weidth1">
+                  <button style="color: rgb(70, 69, 69); background-color: transparent; border: none;" (click)="togglePanel()">
+                    <i class="bi bi-plus-lg mx-2"></i> Add Widget
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div  *ngIf="checkboxStates[4] || checkboxStates[5]"><h5 class="cpnn-text1" *ngIf="shouldShowItem('Registry Scan')" [ngClass]="{'highlight': shouldHighlightItem('Registry Scan')}">Registry Scan</h5></div>
+            <div class="dashboard-container">
+              <div class="dashboard-box" *ngIf="checkboxStates[4] && shouldShowItem('Image Risk Assessment')" [ngClass]="{'highlight': shouldHighlightItem('Image Risk Assessment')}">
+                <p>Image Risk Assessment</p>
+                    
+              </div>
+              <div class="dashboard-box" *ngIf="checkboxStates[5] && shouldShowItem('Image Security Issues')" [ngClass]="{'highlight': shouldHighlightItem('Image Security Issues')}">
+                <p>Image Security Issues</p>
+                <h3>&nbsp;</h3> <!-- Empty header space -->
+              </div>
+              <div class="dashboard-box add-widget mx-2" *ngIf="checkboxStates[4] && checkboxStates[5] && shouldShowItem('Add Widget')" [ngClass]="{'highlight': shouldHighlightItem('Add Widget')}">
+                <div class="weidth1">
+                  <button style="color: rgb(70, 69, 69); background-color: transparent; border: none;" (click)="togglePanel()">
+                    <i class="bi bi-plus-lg mx-2"></i> Add Widget
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Other Sections Here -->
+          
+            <!-- Side Panel -->
+            <div class="side-panel" [ngClass]="{'open': isPanelOpen}">
+              <div class="panel-content">
+                <div class="panel-header">
+                    <h5>Add Widget</h5>
+                <button (click)="togglePanel()" class="close-btn" style="color: white;">&times;</button>
+                </div>
+                <p style="padding-top: 20px;">Personalize your dashboard by adding the following widget</p>
+                <!-- Tabs for different widget categories -->
+                <div class="tabs">
+                    <button [class.active]="selectedTab === 'CSPM'" (click)="setTab('CSPM')">CSPM</button>
+                    <button [class.active]="selectedTab === 'CWPP'" (click)="setTab('CWPP')">CWPP</button>
+                    <button [class.active]="selectedTab === 'Image'" (click)="setTab('Image')">Image</button>
+                    <button [class.active]="selectedTab === 'Ticket'" (click)="setTab('Ticket')">Ticket</button>
+                  </div>
+                  
+                  <!-- Widget selection -->
+                  <div *ngIf="selectedTab === 'CSPM'">
+                    <div class="widget-box">
+                      <label>
+                        <input type="checkbox" [(ngModel)]="checkboxStates[0]"  />
+                        <input class="placeholdertext" type="text" placeholder="Cloud Account" />
+                      </label>
+                    </div>
+                  
+                    <div class="widget-box">
+                      <label>
+                        <input type="checkbox" [(ngModel)]="checkboxStates[1]" />
+                        <input class="placeholdertext" type="text" placeholder="Cloud Account Risk Assessment" />
+                      </label>
+                    </div>
+                  </div>
+                  
+                     <!-- Widget selection2 -->
+                  <div *ngIf="selectedTab === 'CWPP'">
+                    <div class="widget-box">
+                      <label><input type="checkbox" [(ngModel)]="checkboxStates[2]" /> 
+                        <input class="placeholdertext"  type="text"  placeholder="Top 5 Namespace Specific Alerts"/></label>
+                    </div>
+                    <div class="widget-box">
+                      <label><input type="checkbox" [(ngModel)]="checkboxStates[3]" />
+                        <input class="placeholdertext"  type="text"  placeholder="Workload Alerts"/></label>
+                    </div>
+                  </div>
+                   <!-- Widget selection3 -->
+                  <div *ngIf="selectedTab === 'Image'">
+                    <div class="widget-box">
+                      <label><input type="checkbox" [(ngModel)]="checkboxStates[4]" /> 
+                        <input class="placeholdertext"  type="text"  placeholder="Image Risk Assessment"/></label>
+                    </div>
+                    <div class="widget-box">
+                      <label><input type="checkbox" [(ngModel)]="checkboxStates[5]" />
+                        <input class="placeholdertext"  type="text"  placeholder="Image Security Issues"/></label>
+                    </div>
+                  </div>
+                   <!-- Widget selection4 -->
+                  <div *ngIf="selectedTab === 'Ticket'">
+                    <div class="widget-box">
+                      <label><input type="checkbox" [(ngModel)]="checkboxStates[6]"/>
+                         <input class="placeholdertext"  type="text"  placeholder="Widget1"/></label>
+                    </div>
+                    <div class="widget-box">
+                      <label><input type="checkbox"[(ngModel)]="checkboxStates[7]" />
+                        <input class="placeholdertext"  type="text"  placeholder="Widget2"/></label>
+                    </div>
+                  </div>
+                  
+                  
+                <!-- Other tab content -->
+                <div class="panel-footer">
+                    <button class="cancel-btn "><span class="mx-4 rounded">Cancel</span></button>
+                    <button class="confirm-btn"(click)="closePanel()"><span class="mx-4" >Confirm</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
