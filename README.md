@@ -13,7 +13,8 @@ This project is a dynamic dashboard built using Angular (latest version) with Bo
 2. Category-Based Organization: Widgets are organized into categories such as "CSPM Executive Dashboard" and "CWPP Dashboard".
 3. JSON-Based Configuration: The dashboard uses JSON data to define categories and widgets, allowing for easy customization and scalability.
 4. User Interaction: Users can click on the "+Add Widget" button to add a new widget with custom names and text, and use the cross icon to remove widgets from a category.
-5. Search Functionality: The dashboard includes a search feature that allows users to filter through the list of available widgets.
+5. Search Functionality with Highlighting: The dashboard includes a search feature that allows users to filter through the list of available widgets. As the user types in the search bar, matching text within widgets will be highlighted for easy identification.
+6. Visual Feedback: Provides immediate visual feedback when searching or modifying widgets to enhance user experience
 
 ## Technologies Used
 1. Angular (latest version): Building a single-page application with a dynamic dashboard.
