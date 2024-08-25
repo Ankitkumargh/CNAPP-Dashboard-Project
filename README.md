@@ -29,22 +29,23 @@ store: Manages the application state using NgRx or any other store management to
 ## JSON Configuration Example
         The dashboard configuration is defined in a JSON file, which includes categories and their respective widgets.
 
-                           json
-                             Copy code
-                                     {
-                                       "categories": [
-                                     {
-                                           "name": "CSPM Executive Dashboard",
-                                           "widgets": [
-                                                     {
-                                                       "id": 1,
-                                                       "name": "Cloud Accounts",
-                                                       "content": "Random text for Cloud Accounts widget."
-                                                      },
-                                                      {
-                                                      "id": 2,
-                                                      "name": "Cloud Account Risk Assessment",
-                                                       "content": "Random text for Risk Assessment widget."
+        json
+     Copy code
+    {                 
+  {
+  "categories": [
+    {
+      "name": "CSPM Executive Dashboard",
+      "widgets": [
+        {
+          "id": 1,
+          "name": "Cloud Accounts",
+          "content": "Random text for Cloud Accounts widget."
+        },
+        {
+          "id": 2,
+          "name": "Cloud Account Risk Assessment",
+          "content": "Random text for Risk Assessment widget."
         }
       ]
     },
