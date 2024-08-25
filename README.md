@@ -1,7 +1,7 @@
 
 # C<img src="https://github.com/Ankitkumargh/Tally-Codebrewers-Online-Coding-Platform/blob/main/tonline-coding-editor.png" alt="">nappDashbord
 
-## Dashboard Project Documentation
+## CNAPP Dashboard Project 
 
 ## Overview
 This project is a dynamic dashboard built using Angular (latest version) with Bootstrap and Bootstrap Icons for styling. The dashboard allows users to manage widgets dynamically, including adding, removing, and searching for widgets within various categories.
@@ -9,18 +9,18 @@ This project is a dynamic dashboard built using Angular (latest version) with Bo
 ## Features
 1. Dynamic Widget Management: Users can add and remove widgets dynamically within different categories.
 2. Category-Based Organization: Widgets are organized into categories such as "CSPM Executive Dashboard" and "CWPP Dashboard".
-3. JSON-Based Configuration: The dashboard is configured using JSON data to define categories and widgets, allowing for easy customization and scalability.
+3. JSON-Based Configuration: The dashboard uses JSON data to define categories and widgets, allowing for easy customization and scalability.
 4. User Interaction: Users can click on the "+Add Widget" button to add a new widget with custom names and text, and use the cross icon to remove widgets from a category.
 5. Search Functionality: The dashboard includes a search feature that allows users to filter through the list of available widgets.
 
 ## Technologies Used
-1. Angular (latest version): For building a single-page application with a dynamic dashboard.
+1. Angular (latest version): Building a single-page application with a dynamic dashboard.
 2. Bootstrap: For responsive design and layout.
 3. Bootstrap Icons: For icons used in the dashboard.
 4. Store Management Tool: (e.g., NgRx or a simple state management approach) for managing the addition and removal of widgets locally.
 
 ## Project Structure
-src/app: Contains all the Angular components, services, and modules.
+src/app: All Angular components, services, and modules are contained.
 components: Houses all the UI components like dashboards and widgets.
 services: Includes services for managing state and API interactions.
 models: Contains TypeScript interfaces for JSON configuration and widget management.
@@ -29,11 +29,11 @@ store: Manages the application state using NgRx or any other store management to
 ## JSON Configuration Example
         The dashboard configuration is defined in a JSON file, which includes categories and their respective widgets.
 
-        json
+        JSON
      Copy code
     {                 
-  {
-  "categories": [
+    {
+    "categories": [
     {
       "name": "CSPM Executive Dashboard",
       "widgets": [
@@ -64,14 +64,14 @@ store: Manages the application state using NgRx or any other store management to
         }
       ]
     }
-  ]
-}
+    ]
+    }
 
 
 
 
  # Run the Application:
- Start the development server with the following command:ng serve
+ Start the development server with the following command: ng serve
 
 # CnappDashbord
 
@@ -82,7 +82,7 @@ git clone <your-repo-url>
 cd <your-project-directory>
 
 # Install Dependencies:
-Make sure you have Node.js and Angular CLI installed. Then run: npm istall 
+Make sure you have Node.js and Angular CLI installed. Then run: npm install 
 
 ## Development server
 
