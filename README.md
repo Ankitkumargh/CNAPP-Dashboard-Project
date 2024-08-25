@@ -1,5 +1,7 @@
 
-# C<img src="https://github.com/Ankitkumargh/Tally-Codebrewers-Online-Coding-Platform/blob/main/tonline-coding-editor.png" alt="">nappDashbord
+# <img src="https://github.com/Ankitkumargh/CNAPP-Dashboard-Project/blob/main/src/assets/dashbord1.png" alt="">
+
+# <img src="https://github.com/Ankitkumargh/CNAPP-Dashboard-Project/blob/main/src/assets/dashbord2.png" alt="">
 
 ## CNAPP Dashboard Project 
 
