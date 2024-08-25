@@ -1,50 +1,50 @@
 
 # C<img src="https://github.com/Ankitkumargh/Tally-Codebrewers-Online-Coding-Platform/blob/main/tonline-coding-editor.png" alt="">nappDashbord
 
-# Dashboard Project Documentation
+## Dashboard Project Documentation
 
-# Overview
+## Overview
 This project is a dynamic dashboard built using Angular (latest version) with Bootstrap and Bootstrap Icons for styling. The dashboard allows users to manage widgets dynamically, including adding, removing, and searching for widgets within various categories.
 
-# Features
+## Features
 1. Dynamic Widget Management: Users can add and remove widgets dynamically within different categories.
 2. Category-Based Organization: Widgets are organized into categories such as "CSPM Executive Dashboard" and "CWPP Dashboard".
 3. JSON-Based Configuration: The dashboard is configured using JSON data to define categories and widgets, allowing for easy customization and scalability.
 4. User Interaction: Users can click on the "+Add Widget" button to add a new widget with custom names and text, and use the cross icon to remove widgets from a category.
 5. Search Functionality: The dashboard includes a search feature that allows users to filter through the list of available widgets.
 
-# Technologies Used
+## Technologies Used
 1. Angular (latest version): For building a single-page application with a dynamic dashboard.
 2. Bootstrap: For responsive design and layout.
 3. Bootstrap Icons: For icons used in the dashboard.
 4. Store Management Tool: (e.g., NgRx or a simple state management approach) for managing the addition and removal of widgets locally.
 
-# Project Structure
+## Project Structure
 src/app: Contains all the Angular components, services, and modules.
 components: Houses all the UI components like dashboards and widgets.
 services: Includes services for managing state and API interactions.
 models: Contains TypeScript interfaces for JSON configuration and widget management.
 store: Manages the application state using NgRx or any other store management tool.
 
-# JSON Configuration Example
+## JSON Configuration Example
         The dashboard configuration is defined in a JSON file, which includes categories and their respective widgets.
 
-json
-Copy code
-{
-  "categories": [
-    {
-      "name": "CSPM Executive Dashboard",
-      "widgets": [
-        {
-          "id": 1,
-          "name": "Cloud Accounts",
-          "content": "Random text for Cloud Accounts widget."
-        },
-        {
-          "id": 2,
-          "name": "Cloud Account Risk Assessment",
-          "content": "Random text for Risk Assessment widget."
+                           json
+                             Copy code
+                                     {
+                                       "categories": [
+                                     {
+                                           "name": "CSPM Executive Dashboard",
+                                           "widgets": [
+                                                     {
+                                                       "id": 1,
+                                                       "name": "Cloud Accounts",
+                                                       "content": "Random text for Cloud Accounts widget."
+                                                      },
+                                                      {
+                                                      "id": 2,
+                                                      "name": "Cloud Account Risk Assessment",
+                                                       "content": "Random text for Risk Assessment widget."
         }
       ]
     },
