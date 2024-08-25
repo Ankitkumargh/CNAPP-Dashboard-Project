@@ -70,10 +70,10 @@ store: Manages the application state using NgRx or any other store management to
 
 
 
- # Run the Application:
+ ## Run the Application:
  Start the development server with the following command: ng serve
 
-# CnappDashbord
+## CnappDashbord
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
 # How to Run Locally
@@ -82,7 +82,7 @@ git clone <your-repo-url>
 cd <your-project-directory>
 
 # Install Dependencies:
-Make sure you have Node.js and Angular CLI installed. Then run: npm install 
+Make sure you have Node.js and Angular CLI installed. Then run: `npm install` 
 
 ## Development server
 
